@@ -1,0 +1,132 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ad3955;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ad3955;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: #191919;
+  display: grid;
+  place-items: center;
+}
+
+.slider {
+  width: 15rem;
+  height: 1.5rem;
+  background: #333;
+  border-radius: 1.5rem;
+  box-shadow: 2px 2px 4px #111, inset 2px 2px 4px #666;  
+  position: relative;
+}
+
+.knob {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #AD3955;
+  box-shadow: 2px 2px 4px #3e000f, inset 2px 2px 4px #ed7894;
+  cursor: grab;
+  z-index: 1;
+}
+
+.range {
+  position: relative;
+  background: linear-gradient(-90deg, #AD3955, #AD3955, #F9F871, #AD3955, #AD3955);
+  background-size: 400% 100%;
+  background-repeat: no-repeat;
+  top: 0.15rem;
+  left: 0.15rem;
+  height: 1.2rem;
+  width: 0;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  animation: gradient 1.5s linear infinite;
+  box-shadow: inset 0px 0px 5px #333;
+  transform: translateZ(1px);
+}
+
+@keyframes gradient {
+  from {
+    background-position-x: 0%;
+  }
+  to {
+    background-position-x: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.emote {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 5rem;
+  width: fit-content;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
